@@ -1,6 +1,5 @@
 chrome.webNavigation.onCompleted.addListener(async ({ tabId, url }) => {
   try {
-    // Fetch the phishing blacklist from your GitHub raw file
     const response = await fetch("https://raw.githubusercontent.com/Gayathri2803/phishing-list/main/phishing-list.json");
     const data = await response.json();
     
