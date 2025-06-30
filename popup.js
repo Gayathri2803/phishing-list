@@ -1,4 +1,11 @@
 document.getElementById("reportBtn").addEventListener("click", async () => {
-  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  alert(`Thank you! Reporting: ${tab.url}`);
+  try {
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+    if (tab && tab.url) {
+      alert(`Thank you! Reporting:\n${tab.url}`);
+    }
+  } catch (error) {
+    console.error("Error reporting site:", error);
+  }
 });
