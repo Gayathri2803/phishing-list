@@ -1,6 +1,6 @@
 chrome.webNavigation.onCompleted.addListener(async ({ tabId, url }) => {
   try {
-    const response = await fetch("https://raw.githubusercontent.com/Gayathri2803/phishing-list/refs/heads/main/phishing-list.json");
+    const response = await fetch("https://raw.githubusercontent.com/Gayathri2803/phishing-list/main/phishing-list.json");
     const data = await response.json();
     
     const hostname = new URL(url).hostname;
@@ -18,3 +18,4 @@ chrome.webNavigation.onCompleted.addListener(async ({ tabId, url }) => {
     console.error("Error checking phishing list:", err);
   }
 }, { url: [{ schemes: ["http", "https"] }] });
+
