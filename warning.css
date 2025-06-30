@@ -1,12 +1,22 @@
 body {
-  background: #ffe6e6;
-  text-align: center;
+  background: #ffecec;
   font-family: Arial;
+  text-align: center;
   padding-top: 50px;
 }
 .warning-box {
   display: inline-block;
-  border: 2px solid red;
   background: white;
+  border: 2px solid red;
   padding: 20px;
+  border-radius: 8px;
+}
+button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
