@@ -1,3 +1,8 @@
 {
-  "blacklist": ["badsite.com", "fakebank.org"]
+  "blacklist": [
+    "badsite.com",
+    "phishybank.net",
+    "malicious.example",
+    "testphish.fake"
+  ]
 }
